@@ -54,12 +54,12 @@ def isSeparationCharacter(currentChar):
 # Tests
 
 test_files = [ # (test_file_path, expected_word_count)
-    ("cs4300/task6_test_files/task6_read_me.txt", 104),
-    ("cs4300/task6_test_files/test1_91.txt", 91),
-    ("cs4300/task6_test_files/test2_104.txt", 104),
-    ("cs4300/task6_test_files/test3_129.txt", 129),
-    ("cs4300/task6_test_files/test4_0.txt", 0),
-    ("cs4300/task6_test_files/test5_25.txt", 25),
+    ("cs4300/homework1/task6_test_files/task6_read_me.txt", 104),
+    ("cs4300/homework1/task6_test_files/test1_91.txt", 91),
+    ("cs4300/homework1/task6_test_files/test2_104.txt", 104),
+    ("cs4300/homework1/task6_test_files/test3_129.txt", 129),
+    ("cs4300/homework1/task6_test_files/test4_0.txt", 0),
+    ("cs4300/homework1/task6_test_files/test5_25.txt", 25),
 ]
 
 @pytest.mark.parametrize("test_file_path,expected_word_count", test_files)

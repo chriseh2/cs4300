@@ -12,5 +12,12 @@
 import pytest
 import numpy as np
 
+# Simple function using numpy to find the median of an array containing numbers
+def medianArray():
+    numbers = np.median([3, 2, 10, 5, 7])
+    return numbers
 
 # Tests
+
+def test_medianArray():
+    assert medianArray() == 5

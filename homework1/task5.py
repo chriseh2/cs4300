@@ -18,13 +18,19 @@ def listBooks():
     print(favoriteBooks[:3])
 
 # Function to create a dictionary that represents a basic student database, including student names and their corresponding student IDs
+# The function should print the names of each student
 def studentDb():
     # Student database
     studentDatabase = {
-        "student1" : {"name" : "Chris Helland", "id" : "24"},
-        "student2" : {"name" : "Bob Smith", "id" : "74"},
-        "student3" : {"name" : "Robert Doe", "id" : "102"}
+        24 : {"name" : "Chris Helland"},
+        74: {"name" : "Bob Smith"},
+        102 : {"name" : "Robert Doe"}
     }
+    for key, name in studentDatabase.items():
+        info = studentDatabase[key]
+        print(f'{info["name"]}')
+
+studentDb()
 
 # Tests
 
@@ -33,5 +39,7 @@ def test_listBooks(capsys):
     captured = capsys.readouterr()
     assert captured.out == "[('Onyx Storm', 'Rebecca Yarros'), ('Wings of Starlight', 'Allison Saft'), ('Wind and Truth', 'Brandon Sanderson')]\n"
 
-def test_studentDb():
+def test_studentDb(capsys):
     studentDb()
+    captured = capsys.readouterr()
+    assert captured.out == "Chris Helland\nBob Smith\nRobert Doe\n"
